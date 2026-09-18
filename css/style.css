@@ -1,0 +1,602 @@
+/* ===== RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #2b2b2b;
+    line-height: 1.7;
+    background: #fdfaf5;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+a { text-decoration: none; color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 { font-family: Georgia, serif; font-weight: normal; }
+
+/* ===== HEADER ===== */
+.header {
+    background: #fdfaf5;
+    border-bottom: 1px solid #eadfce;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 25px;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-style: italic;
+    color: #8b1e1e;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    margin-left: 30px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.nav a:hover { color: #8b1e1e; }
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(rgba(30,20,15,0.55), rgba(30,20,15,0.55)),
+                linear-gradient(135deg, #8b1e1e, #c97b3c);
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-tag {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: #8b1e1e;
+    color: #fff;
+    border-color: #8b1e1e;
+}
+
+.btn-primary:hover {
+    background: #6d1616;
+    border-color: #6d1616;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #8b1e1e;
+}
+
+/* ===== WELCOME ===== */
+.welcome {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 2.2rem;
+    color: #8b1e1e;
+    margin-bottom: 20px;
+}
+
+.section-lead {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* ===== FEATURED DISHES ===== */
+.featured {
+    padding: 80px 20px;
+    background: #f6efe4;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #8b1e1e;
+    margin-bottom: 50px;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.dish-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dish-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.dish-img {
+    height: 160px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.dish-card h3 {
+    font-size: 1.4rem;
+    color: #2b2b2b;
+    margin-bottom: 8px;
+}
+
+.dish-card p {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: inline-block;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    color: #8b1e1e;
+    font-size: 1.2rem;
+}
+
+/* ===== ABOUT STRIP ===== */
+.about-strip {
+    background: #2b1d15;
+    color: #f6efe4;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.about-strip h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f0c987;
+}
+
+.strip-text p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.about-strip .btn-primary {
+    background: #f0c987;
+    color: #2b1d15;
+    border-color: #f0c987;
+}
+
+.about-strip .btn-primary:hover {
+    background: #e0b370;
+    border-color: #e0b370;
+}
+
+/* ===== INFO BAR ===== */
+.info-bar {
+    padding: 60px 20px;
+    background: #fdfaf5;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.info-grid h4 {
+    color: #8b1e1e;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.info-grid p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #1a120b;
+    color: #b8a898;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav a { margin: 0 12px; }
+    .hero h1 { font-size: 2.2rem; }
+}
+
+/* ===== PAGE HERO (inner pages) ===== */
+.page-hero {
+    background: linear-gradient(rgba(30,20,15,0.6), rgba(30,20,15,0.6)),
+                linear-gradient(135deg, #8b1e1e, #c97b3c);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.page-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== MENU ===== */
+.menu-section {
+    padding: 80px 20px;
+    background: #fdfaf5;
+}
+
+.menu-category {
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.menu-category h2 {
+    font-size: 1.8rem;
+    color: #8b1e1e;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0c987;
+    font-style: italic;
+}
+
+.menu-item {
+    margin-bottom: 25px;
+}
+
+.menu-item-head {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.menu-item-head h3 {
+    font-size: 1.15rem;
+    color: #2b2b2b;
+    font-weight: normal;
+}
+
+.dots {
+    flex: 1;
+    border-bottom: 1px dotted #c5b8a5;
+    position: relative;
+    top: -4px;
+}
+
+.menu-item .price {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    color: #8b1e1e;
+    font-size: 1.1rem;
+}
+
+.menu-item p {
+    color: #777;
+    font-size: 0.92rem;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* ===== CTA STRIP ===== */
+.cta-strip {
+    background: #f6efe4;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.cta-strip h2 {
+    font-size: 2rem;
+    color: #8b1e1e;
+    margin-bottom: 25px;
+}
+
+/* ===== GALLERY ===== */
+.gallery-section {
+    padding: 80px 20px;
+    background: #fdfaf5;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 18px;
+}
+
+.gallery-item {
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 50%, rgba(0,0,0,0.45));
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.gallery-item span {
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.gallery-item:hover::after,
+.gallery-item:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item.wide { grid-column: span 2; }
+
+/* Responsive gallery */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-item.wide { grid-column: span 2; }
+}
+
+@media (max-width: 560px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-item.wide,
+    .gallery-item.tall {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
+
+/* ===== RESERVATION PAGE ===== */
+.reservation-section {
+    padding: 80px 20px;
+    background: #fdfaf5;
+}
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Left info column */
+.res-info h2 {
+    font-size: 1.8rem;
+    color: #8b1e1e;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0c987;
+    font-style: italic;
+}
+
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-block h4 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8b1e1e;
+    margin-bottom: 6px;
+}
+
+.info-block p {
+    color: #555;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/* Right form column */
+.res-form-wrap {
+    background: #fff;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.res-form-wrap h2 {
+    font-size: 1.8rem;
+    color: #8b1e1e;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.res-form .form-group {
+    margin-bottom: 20px;
+}
+
+.res-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 0;
+}
+
+.res-form .form-row + .form-group {
+    margin-top: 0;
+}
+
+.res-form label {
+    display: block;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #333;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.res-form input,
+.res-form select,
+.res-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid #d9cdb8;
+    border-radius: 4px;
+    background: #fdfaf5;
+    color: #2b2b2b;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.res-form input:focus,
+.res-form select:focus,
+.res-form textarea:focus {
+    border-color: #8b1e1e;
+    box-shadow: 0 0 0 3px rgba(139,30,30,0.1);
+    background: #fff;
+}
+
+.res-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-full {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Reservation page responsive */
+@media (max-width: 900px) {
+    .reservation-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .res-form-wrap {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 560px) {
+    .res-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .res-form .form-row .form-group {
+        margin-bottom: 20px;
+    }
+}
